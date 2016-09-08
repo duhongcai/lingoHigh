@@ -12,6 +12,34 @@
    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
    	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <context:property-placeholder location="jdbc.properties"/>
 
+    <!-- 使用Druid数据库连接池管理数据库连接-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- 数据库连接基础配置 -->
+        <property name="driverClassName" value="${jdbc.driverName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.uname}"/>
+        <property name="password" value="${jdbc.upassword}"/>
 
+        <!-- 数据库连接池配置 -->
+        <property name="maxWait" value="30000"/>
+        <property name="initialSize" value="2"/>
+        <property name="minIdle" value="2"/>
+        <property name="maxActive" value="30"/>
+        <property name="timeBetweenEvictionRunsMillis" value="30000"/>
+        <property name="minEvictableIdleTimeMillis" value="10000"/>
+        <property name="validationQuery" value="SELECT 'X'"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="filters" value="stat"/>
+    </bean>
+
+    <!--配置基于spring的事务管理-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
     </beans>

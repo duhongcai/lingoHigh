@@ -1,4 +1,4 @@
-package util;
+package lingoHigh.util;
 
 /**
  * Created by DuHongcai on 2016/9/7.

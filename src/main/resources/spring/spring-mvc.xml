@@ -3,14 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:ss="http://www.springframework.org/schema/security"
        xmlns:jee="http://www.springframework.org/schema/jee"
-       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.alibaba.com/schema/stat"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
    	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
    	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
    	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-   	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+   	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.alibaba.com/schema/stat http://www.alibaba.com/schema/stat.xsd">
+
+    <context:component-scan base-package="lingoHigh.controller" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <mvc:annotation-driven/>
 
 
 

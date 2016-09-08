@@ -40,6 +40,16 @@
       <artifactId>spring-tx</artifactId>
       <version>4.2.1.RELEASE</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.2.1.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.2.1.RELEASE</version>
+    </dependency>
 
     <!--2：mybatis-->
     <dependency>
@@ -58,6 +68,14 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.26</version>
+    </dependency>
+
+    <!--4:数据库连接池 Druid-->
+    <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.16</version>
     </dependency>
 
     <dependency>

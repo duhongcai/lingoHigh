@@ -33,15 +33,15 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:spring/spring.xml</param-value>
+      <param-value>classpath:spring/spring-mvc.xml</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>springServlet</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 
-  <!--Druid 监控平台配置-->
+  <!--Druid 监控平台配置
   <filter>
     <filter-name>DruifWebStatFilter</filter-name>
     <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
@@ -63,4 +63,5 @@
     <servlet-name>DruidStateView</servlet-name>
     <url-pattern>/druid/*</url-pattern>
   </servlet-mapping>
+  -->
   </web-app>

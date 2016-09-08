@@ -28,7 +28,7 @@
         <property name="minIdle" value="2"/>
         <property name="maxActive" value="30"/>
         <property name="timeBetweenEvictionRunsMillis" value="30000"/>
-        <property name="minEvictableIdleTimeMillis" value="10000"/>
+        <property name="minEvictableIdleTimeMillis" value="60000"/>
         <property name="validationQuery" value="SELECT 'X'"/>
         <property name="testWhileIdle" value="true"/>
         <property name="testOnReturn" value="false"/>

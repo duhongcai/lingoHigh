@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/")
 public class LoginController {
 
-    @RequestMapping(value = "/")
-    public String toIndex(){
-        return "index";
-    }
 }
 
 

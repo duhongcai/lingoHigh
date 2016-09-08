@@ -3,7 +3,7 @@ package lingoHigh.entry;
 import java.io.Serializable;
 
 /**
- * Created by DuHongcai on 2016/9/7.
+ * Created by DuHongcai on 2016/9/8.
  */
 public class Account implements Serializable {
     private String id;

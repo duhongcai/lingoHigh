@@ -1,17 +1,16 @@
 package lingoHigh.entry;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
- * Created by DuHongcai on 2016/9/7.
+ * Created by DuHongcai on 2016/9/8.
  */
 public class User implements Serializable {
     private String id;
     private String name;
     private String password;
     private String email;
-    private Date birthday;
+    private String birthday;
 
     public String getId() {
         return id;
@@ -45,12 +44,11 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
-
 }

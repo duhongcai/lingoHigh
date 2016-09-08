@@ -13,7 +13,22 @@
    	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
    	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.alibaba.com/schema/stat http://www.alibaba.com/schema/stat.xsd">
 
-    <context:component-scan base-package="lingoHigh"/>
-    <mvc:annotation-driven/>
+
+    <import resource="spring-resource.xml"/>
+
+    <context:component-scan base-package="lingoHigh">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:/mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:sql/**/*.xml"/>
+    </bean>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="lingoHigh.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
 
 </beans>

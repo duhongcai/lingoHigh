@@ -23,7 +23,6 @@ public class JdbcTest {
            while(rs.next()){
                System.out.println(rs.getObject("name"));
            }
-
        }catch(Exception e){
            e.printStackTrace();
        }

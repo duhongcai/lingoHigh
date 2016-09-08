@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lingoHigh.dao.UserDao">
+    <resultMap id="userResult" type="User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="birthday" column="birthday"/>
+    </resultMap>
+
+    <select id="queryUsers" resultMap="userResult" parameterType="String">
+        SELECT
+        id,name,password,email,birthday
+        FROM users
+    </select>
+</mapper>

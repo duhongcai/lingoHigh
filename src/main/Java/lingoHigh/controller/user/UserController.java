@@ -12,7 +12,7 @@ public class UserController {
 
     @RequestMapping(value = "/control")
     public String userInfo(){
+
         return "/user/userInfo";
     }
-
 }

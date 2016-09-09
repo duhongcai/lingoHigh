@@ -83,32 +83,76 @@
     <div class="clearfix"></div>
     <div class="page-container">
         <div class="page-sidebar-wrapper">
-            <div class="page-sidebar-menu" id="page-sidebar-menu">
-                <li class="sidebar-toggler-wrapper">
-                    <div class="sidebar-toggler hidden-phone"></div>
-                </li>
+          <div class="page-sidebar navbar-collapse collapse">
+              <ul class="page-sidebar-menu" id="page-sidebar-menu">
+                  <li class="sidebar-toggler-wrapper">
+                      <div class="sidebar-toggler hidden-phone"></div>
+                  </li>
 
-                <li class="start active">
-                    <a href="/" id="btn-dashboard">
-                        <i class="fa fa-home"></i><span class="title">会员管理</span>
-                    </a>
-                </li>
+                  <li class="start active">
+                      <a href="/" id="btn-dashboard">
+                          <i class="fa fa-home"></i><span class="title">会员管理</span>
+                      </a>
+                      <ul class="sub-menu">
+                          <li>
+                              <a href="user/control" target="main-content">增</a>
+                          </li>
+                          <li>
+                              <a href="/" target="main-content">删</a>
+                          </li>
+                          <li>
+                              <a href="/" target="main-content">改</a>
+                          </li>
+                          <li>
+                              <a href="/" target="main-content">查</a>
+                          </li>
+                      </ul>
+                  </li>
 
-                <li class="">
-                    <a href="/" >
-                        <i class="fa fa-home"></i><span class="title">商品管理</span>
-                    </a>
-                </li>
+                  <li class="">
+                      <a href="/" >
+                          <i class="fa fa-home"></i><span class="title">商品管理</span>
+                      </a>
+                  </li>
 
-                <li class="">
-                    <a href="/" >
-                        <i class="fa fa-home"></i><span class="title">订单管理</span>
-                    </a>
-                </li>
+                  <li class="">
+                      <a href="/" >
+                          <i class="fa fa-home"></i><span class="title">订单管理</span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
 
+        <div class="page-content-wrapper">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="page-title" id="index-page-title">LingoHigh电子商务交易平台</h3>
+                        <hr/>
+                    </div>
+                </div>
+                <div id="main-content"></div>
             </div>
         </div>
     </div>
+        <script src="assets/plugins/respond.min.js"></script>
+        <script src="assets/plugins/excanvas.min.js"></script>
+        <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+        <script src="assets/plugins/bootstrap-table/js/bootstrap-table.js"></script>
+        <script src="assets/plugins/bootstrap-table/js/bootstrap-table-zh-CN.min.js"></script>
+        <script src="assets/plugins/jquery-validation/dist/jquery.validate.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/plugins/select2/select2.min.js"></script>
+        <script src="assets/scripts/app.js" type="text/javascript"></script>
+        <script type="text/javascript" src="app/js/index.js"></script>
     </body>
 </html>
 

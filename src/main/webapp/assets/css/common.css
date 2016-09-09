@@ -1,0 +1,40 @@
+/*   
+ *页面共通的CSS
+ */
+@charset "utf-8";
+
+.query-inline-block /* 查询区域-旁边的内联对象会被呈递在同一行内，允许空格 */
+{ 
+	display: inline-block;
+}
+
+.query-spacing /*查询区域间隔样式 */
+{ 
+	display: inline-block;
+	margin-left:20px;
+}
+
+.date-range-width /* 日期范围的宽度 */
+{ 
+	width:204px;
+}
+
+.date-range-width  i /* 日期范围的宽度 */
+{ 
+	cursor:pointer;
+}
+
+.date-width /* 日期范围的宽度 */
+{ 
+	width:130px;
+}
+
+.date-width  i /* 日期范围的宽度 */
+{ 
+	cursor:pointer;
+}
+
+.query-inline-block /*查询区域间隔样式 */
+{ 
+	display: inline-block;
+}

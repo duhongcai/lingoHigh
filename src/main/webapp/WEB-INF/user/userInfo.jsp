@@ -101,14 +101,22 @@
     <script type="text/javascript">
         $(document).ready(function() {
             console.log("lingoHigh");
-            $(".theme-page").toggle();
+            $(".theme-page").slideUp(0);
             $(".theme-mask").fadeOut();
             $("table").on("click",".updateUserInfo",function(){
+
+                $(".uCode1").val($(this).parent().parent().find("td:eq(0)").text().trim());
+                $(".uName1").val($(this).parent().parent().find("td:eq(1)").text().trim());
+                $(".uPassword1").val($(this).parent().parent().find("td:eq(2)").text().trim());
+                $(".uEmail1").val($(this).parent().parent().find("td:eq(3)").text().trim());
+                $(".uBirthday1").val($(this).parent().parent().find("td:eq(4)").text().trim());
+
                 $(".theme-mask").fadeIn(100);
                 $(".theme-page").slideDown(200);
             });
         });
         $(".close").click(function () {
+
                 $(".theme-page").fadeOut(100);
                 $(".theme-mask").slideUp(200);
         });
@@ -126,7 +134,7 @@
                <td>密码</td>
                <td>邮箱</td>
                <td>生日</td>
-               <td>操作</td>
+               <td>操作</td>00
            </tr>
            <c:forEach items="${users}" var="user" varStatus="temp">
                <tr>
@@ -160,13 +168,13 @@
             <a href="javascript:;" title="关闭" class="close">x</a>
         </div>
        <div class="theme-body dform">
-           <form class="theme-content" action="">
+           <form class="theme-content" action="user/updateUserInfo" method="post">
                <dl>
-                   <dd>编码：<input type="text" value="" class="uCode1" readonly="readonly"/></dd><br/>
-                   <dd>名称：<input type="text" value="" class="uName1" /></dd><br/>
-                   <dd>密码：<input type="text" value="" class="uPassword1" /></dd><br/>
-                   <dd>邮箱：<input type="text" value="" class="uEmail1" /></dd><br/>
-                   <dd>生日：<input type="text" value="" class="uBirthday1" /></dd><br/>
+                   <dd>编码：<input type="text" value="" name="id" class="uCode1" readonly="readonly"/></dd><br/>
+                   <dd>名称：<input type="text" value="" name="name" class="uName1" /></dd><br/>
+                   <dd>密码：<input type="text" value="" name="password" class="uPassword1" /></dd><br/>
+                   <dd>邮箱：<input type="text" value="" name="email" class="uEmail1" /></dd><br/>
+                   <dd>生日：<input type="text" value="" name="birthday" class="uBirthday1" /></dd><br/>
                    <dd>
                        <input type="submit" class="sendUpdate" value="提交">
                    </dd>

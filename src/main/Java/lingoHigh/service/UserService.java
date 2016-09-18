@@ -9,4 +9,11 @@ import java.util.List;
  */
 public interface UserService {
     List<User> queryUsers(String userName);
+    
+    void insertUser(User user);
+
+    void delUser(String name);
+
+    void updateUser(User user);
+
 }

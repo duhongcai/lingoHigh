@@ -8,7 +8,7 @@ import org.apache.shiro.realm.Realm;
  */
 public class MyRealm1 implements Realm {
     public String getName() {
-        return "MyRealm1";
+        return "MyRealm112";
     }
 
     public boolean supports(AuthenticationToken token) {
@@ -25,5 +25,6 @@ public class MyRealm1 implements Realm {
             throw new IncorrectCredentialsException();
         }
         return new SimpleAuthenticationInfo(userName,password,getName());
+
     }
 }

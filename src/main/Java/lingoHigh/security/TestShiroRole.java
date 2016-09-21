@@ -57,10 +57,25 @@ public class TestShiroRole {
         System.out.println(subject.getSession());
     }
 
+    private static void testPermitted(){
+        Subject subject = login("classpath:security/role/shiro-authorizer.ini","zhang","123");
+        subject.getPrincipal();
+        subject.checkPermission("user1:update");
+        subject.checkPermission("user2:update");
+        subject.checkPermission("+user1+2");//新增权限
+        subject.checkPermission("+user2+8");//查看权限
+        subject.checkPermission("+user2+10");
+        subject.isPermitted("");
+        subject.hasRole("");
+        subject.checkPermission("+user1+4");//删除权限
+        subject.checkPermission("menu:view");
+
+    }
+
     public static void main(String[] args) {
         //testHasRole();
         //testHashPermission();
-         testIsPermitted();
+        // testIsPermitted();
+        testPermitted();
     }
-
 }

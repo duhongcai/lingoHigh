@@ -6,10 +6,16 @@ import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.Factory;
 import org.apache.shiro.util.ThreadContext;
 import org.springframework.util.Assert;
+
+import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by DuHongcai on 2016/9/19.
@@ -73,15 +79,31 @@ public class TestShiroWorld {
         System.out.println(subject.getPrincipal());
     }
 
+    private static void login(){
+        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:security/shiro-authenticator-atLeastTwo-success.ini");
+        SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
 
-
-
+        Subject subject = SecurityUtils.getSubject();
+        UsernamePasswordToken token = new UsernamePasswordToken("zhang","123");
+        token.getPrincipal();
+        subject.login(token);
+    }
 
     public static void main(String[] args) {
         TestShiroWorld shiroWorld = new TestShiroWorld();
         //shiroWorld.shiroDemo1();
         //shiroWorld.testCustomRealm();
-        shiroWorld.testMuliRealm();
+        //shiroWorld.testMuliRealm();
+        //login("classpath:security/shiro-authenticator-all-success.ini");
+        login();
+        Subject subject = SecurityUtils.getSubject();
+
+        PrincipalCollection principalCollection = subject.getPrincipals();
+        Set<String> ps = principalCollection.getRealmNames();
+        for (String p:ps) {
+            System.out.println(p);
+        }
         tearDown();
     }
 

@@ -14,7 +14,7 @@ var FormComponents = function () {
         $('.radio1').on('switch-change', function () {
             $('.radio1').bootstrapSwitch('toggleRadioStateAllowUncheck', false);
         });
-    }
+    };
 
     var handleBootstrapTouchSpin = function() {
 
@@ -41,12 +41,12 @@ var FormComponents = function () {
             maxboostedstep: 10,
             postfix: '%'
         });         
-    }
+    };
 
     var handleBootstrapMaxlength = function() {
         $('#maxlength_defaultconfig').maxlength({
             limitReachedClass: "label label-danger",
-        })
+        });
     
         $('#maxlength_thresholdconfig').maxlength({
             limitReachedClass: "label label-danger",
@@ -73,14 +73,14 @@ var FormComponents = function () {
             alwaysShow: true,
             placement: App.isRTL() ? 'top-right' : 'top-left'
         });
-    }
+    };
 
     var handleSpinners = function () {
         $('#spinner1').spinner();
         $('#spinner2').spinner({disabled: true});
         $('#spinner3').spinner({value:0, min: 0, max: 10});
         $('#spinner4').spinner({value:0, step: 5, min: 0, max: 200});
-    }
+    };
 
     var handleWysihtml5 = function () {
         if (!jQuery().wysihtml5) {
@@ -92,7 +92,7 @@ var FormComponents = function () {
                 "stylesheets": ["assets/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
             });
         }
-    }
+    };
 
     var handleTagsInput = function () {
         if (!jQuery().tagsInput) {
@@ -107,7 +107,7 @@ var FormComponents = function () {
         $('#tags_2').tagsInput({
             width: 300
         });
-    }
+    };
 
     var handleDatePickers = function () {
 
@@ -118,7 +118,7 @@ var FormComponents = function () {
             });
             $('body').removeClass("modal-open"); // fix bug when inline picker is used in modal
         }
-    }
+    };
 
     var handleTimePickers = function () {
 
@@ -133,7 +133,7 @@ var FormComponents = function () {
                 showMeridian: false
             });
         }
-    }
+    };
 
     var handleDateRangePickers = function () {
         if (!jQuery().daterangepicker) {
@@ -199,7 +199,7 @@ var FormComponents = function () {
         );
         //Set the initial state of the picker label
         $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-    }
+    };
 
     var handleDatetimePicker = function () {
 
@@ -230,7 +230,7 @@ var FormComponents = function () {
         });
 
         $('body').removeClass("modal-open"); // fix bug when inline picker is used in modal
-    }
+    };
 
     var handleClockfaceTimePickers = function () {
 
@@ -263,7 +263,7 @@ var FormComponents = function () {
         $('.clockface_3').clockface({
             format: 'H:mm'
         }).clockface('show', '14:30');
-    }
+    };
 
     var handleColorPicker = function () {
         if (!jQuery().colorpicker) {
@@ -273,7 +273,7 @@ var FormComponents = function () {
             format: 'hex'
         });
         $('.colorpicker-rgba').colorpicker();
-    }
+    };
 
     var handleSelect2 = function () {
 
@@ -339,7 +339,7 @@ var FormComponents = function () {
             } else if (movie.synopsis !== undefined) {
                 markup += "<div class='movie-synopsis'>" + movie.synopsis + "</div>";
             }
-            markup += "</td></tr></table>"
+            markup += "</td></tr></table>";
             return markup;
         }
 
@@ -390,7 +390,7 @@ var FormComponents = function () {
                 return m;
             } // we do not want to escape markup since we are displaying html in results
         });
-    }
+    };
 
     var handleSelect2Modal = function () {
 
@@ -454,7 +454,7 @@ var FormComponents = function () {
             } else if (movie.synopsis !== undefined) {
                 markup += "<div class='movie-synopsis'>" + movie.synopsis + "</div>";
             }
-            markup += "</td></tr></table>"
+            markup += "</td></tr></table>";
             return markup;
         }
 
@@ -505,7 +505,7 @@ var FormComponents = function () {
                 return m;
             } // we do not want to escape markup since we are displaying html in results
         });
-    }
+    };
 
     var handleMultiSelect = function () {
         $('#my_multi_select1').multiSelect();
@@ -548,7 +548,7 @@ var FormComponents = function () {
                 this.qs2.cache();
             }
         });
-    }
+    };
 
     var handleInputMasks = function () {
         $.extend($.inputmask.defaults, {
@@ -591,14 +591,14 @@ var FormComponents = function () {
             placeholder: " ",
             clearMaskOnLostFocus: true
         }); //default
-    }
+    };
 
     var handleIPAddressInput = function () {
         $('#input_ipv4').ipAddress();
         $('#input_ipv6').ipAddress({
             v: 6
         });
-    }
+    };
 
     var handlePasswordStrengthChecker = function () {
         var initialized = false;
@@ -623,7 +623,7 @@ var FormComponents = function () {
                 initialized = true;
             }
         });
-    }
+    };
 
     var handleUsernameAvailabilityChecker1 = function () {
         var input = $("#username1_input");
@@ -698,7 +698,7 @@ var FormComponents = function () {
             }, 'json');
 
         });
-    }
+    };
 
     var handleUsernameAvailabilityChecker2 = function () {
         $("#username2_input").change(function () {
@@ -746,7 +746,7 @@ var FormComponents = function () {
             }, 'json');
 
         });
-    }
+    };
 
     return {
         //main function to initiate the module

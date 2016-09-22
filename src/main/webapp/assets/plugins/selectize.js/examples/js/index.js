@@ -40,7 +40,7 @@ $(function() {
 		var $container = $('<div>').addClass('value').html('Current Value: ');
 		var $value = $('<span>').appendTo($container);
 		var $input = $(this);
-		var update = function(e) { $value.text(JSON.stringify($input.val())); }
+		var update = function(e) { $value.text(JSON.stringify($input.val())); };
 
 		$(this).on('change', update);
 		update();

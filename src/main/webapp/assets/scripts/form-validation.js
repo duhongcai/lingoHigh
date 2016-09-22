@@ -73,7 +73,7 @@ var FormValidation = function () {
                 }
             });
 
-    }
+    };
 
     var handleValidation2 = function() {
         // for more info visit the official plugin documentation: 
@@ -153,7 +153,7 @@ var FormValidation = function () {
             });
 
 
-    }
+    };
 
     var handleValidation3 = function() {
         // for more info visit the official plugin documentation: 
@@ -168,7 +168,7 @@ var FormValidation = function () {
                 for(var instanceName in CKEDITOR.instances) {
                     CKEDITOR.instances[instanceName].updateElement();
                 }
-            })
+            });
 
             form3.validate({
                 errorElement: 'span', //default input error message container
@@ -274,7 +274,7 @@ var FormValidation = function () {
             $('.select2me', form3).change(function () {
                 form3.validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
             });
-    }
+    };
 
     var handleWysihtml5 = function() {
         if (!jQuery().wysihtml5) {
@@ -287,7 +287,7 @@ var FormValidation = function () {
                 "stylesheets": ["assets/plugins/bootstrap-wysihtml5/wysiwyg-color.css"]
             });
         }
-    }
+    };
 
     return {
         //main function to initiate the module

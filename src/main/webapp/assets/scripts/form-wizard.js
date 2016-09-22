@@ -164,7 +164,7 @@ var FormWizard = function () {
                         $(this).html(payment.join("<br>"));
                     }
                 });
-            }
+            };
 
             var handleTitle = function(tab, navigation, index) {
                 var total = navigation.find('li').length;
@@ -193,7 +193,7 @@ var FormWizard = function () {
                     $('#form_wizard_1').find('.button-submit').hide();
                 }
                 App.scrollTo($('.page-title'));
-            }
+            };
 
             // default form wizard
             $('#form_wizard_1').bootstrapWizard({

@@ -62,7 +62,7 @@ yyyCloud.sideBar = function(){
 			}else if(tabBox.scrollLeft()>mirror.index()*liw){
 				tabBox.scrollLeft(mirror.index()*liw-mirror.index());
 			}
-		};
+		}
 		if($(this).attr('data-src')){
 			iframe.attr('src',$(this).attr('data-src'));
 		}
@@ -185,13 +185,13 @@ yyyCloud.runroll = function(){
 			});
 		}		
 	})
-}
+};
 
 $(function(){
 	yyyCloud.layoutFit();
 	yyyCloud.sideBar();
 	yyyCloud.runroll();
-})
+});
 
 function launchFullscreen(element) {
 	if(element.requestFullscreen) {

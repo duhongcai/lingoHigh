@@ -67,10 +67,7 @@ public class BitPermission implements Permission {
             return false;
         }
 
-        if (!("*".equals(this.instanceId) || this.instanceId.equals(other.instanceId))){
-            return false;
-        }
-        return true;
+        return "*".equals(this.instanceId) || this.instanceId.equals(other.instanceId);
     }
 
     @Override

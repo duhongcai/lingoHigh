@@ -369,9 +369,10 @@ function isArray(obj) {
  * @api public
  */
 
-function EventEmitter(){};
 
-/**
+function EventEmitter() {
+}
+  /**
  * Adds a listener.
  *
  * @api public
@@ -407,8 +408,7 @@ EventEmitter.prototype.once = function (name, fn) {
   function on () {
     self.removeListener(name, on);
     fn.apply(this, arguments);
-  };
-
+  }
   on.listener = fn;
   this.on(name, on);
 
@@ -780,8 +780,10 @@ function Hook(title, fn) {
  * Inherit from `Runnable.prototype`.
  */
 
-function F(){};
-F.prototype = Runnable.prototype;
+
+function F() {
+}
+  F.prototype = Runnable.prototype;
 Hook.prototype = new F;
 Hook.prototype.constructor = Hook;
 
@@ -2175,8 +2177,10 @@ function Dot(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 Dot.prototype = new F;
 Dot.prototype.constructor = Dot;
 
@@ -2608,9 +2612,8 @@ function map(cov) {
   }
 
   return ret;
-};
-
-/**
+}
+  /**
  * Map jscoverage data for a single source file
  * to a JSON structure suitable for reporting.
  *
@@ -2907,8 +2910,10 @@ function Landing(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 Landing.prototype = new F;
 Landing.prototype.constructor = Landing;
 
@@ -2978,8 +2983,10 @@ function List(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 List.prototype = new F;
 List.prototype.constructor = List;
 
@@ -3118,8 +3125,10 @@ function Min(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 Min.prototype = new F;
 Min.prototype.constructor = Min;
 
@@ -3379,8 +3388,10 @@ function write(string) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 NyanCat.prototype = new F;
 NyanCat.prototype.constructor = NyanCat;
 
@@ -3473,8 +3484,10 @@ function Progress(runner, options) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 Progress.prototype = new F;
 Progress.prototype.constructor = Progress;
 
@@ -3568,8 +3581,10 @@ function Spec(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 Spec.prototype = new F;
 Spec.prototype.constructor = Spec;
 
@@ -3789,8 +3804,10 @@ function XUnit(runner) {
  * Inherit from `Base.prototype`.
  */
 
-function F(){};
-F.prototype = Base.prototype;
+
+function F() {
+}
+  F.prototype = Base.prototype;
 XUnit.prototype = new F;
 XUnit.prototype.constructor = XUnit;
 
@@ -3899,8 +3916,10 @@ function Runnable(title, fn) {
  * Inherit from `EventEmitter.prototype`.
  */
 
-function F(){};
-F.prototype = EventEmitter.prototype;
+
+function F() {
+}
+  F.prototype = EventEmitter.prototype;
 Runnable.prototype = new F;
 Runnable.prototype.constructor = Runnable;
 
@@ -4148,8 +4167,10 @@ Runner.immediately = global.setImmediate || process.nextTick;
  * Inherit from `EventEmitter.prototype`.
  */
 
-function F(){};
-F.prototype = EventEmitter.prototype;
+
+function F() {
+}
+  F.prototype = EventEmitter.prototype;
 Runner.prototype = new F;
 Runner.prototype.constructor = Runner;
 
@@ -4692,8 +4713,10 @@ function Suite(title, ctx) {
  * Inherit from `EventEmitter.prototype`.
  */
 
-function F(){};
-F.prototype = EventEmitter.prototype;
+
+function F() {
+}
+  F.prototype = EventEmitter.prototype;
 Suite.prototype = new F;
 Suite.prototype.constructor = Suite;
 
@@ -4959,8 +4982,10 @@ function Test(title, fn) {
  * Inherit from `Runnable.prototype`.
  */
 
-function F(){};
-F.prototype = Runnable.prototype;
+
+function F() {
+}
+  F.prototype = Runnable.prototype;
 Test.prototype = new F;
 Test.prototype.constructor = Test;
 

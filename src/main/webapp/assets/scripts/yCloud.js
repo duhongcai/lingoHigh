@@ -73,7 +73,7 @@ yCloud.sideBar = function(){
 				//tabBox.scrollLeft(mirror.index()*liw-mirror.index());
 				tabBox.stop(false).animate({scrollLeft:l},300);
 			}
-		};
+		}
 		appendTab($(this).attr('data-src'),$(this).attr('tid'));
 		/*if($(this).attr('data-src')){
 			//console.log($(this).attr('tid'));
@@ -170,7 +170,7 @@ yCloud.sideBar = function(){
 	function closeTab(cid,sid){
 		//cid remove tab
 		//sid next show tab
-		console.log(cid,sid)
+		console.log(cid,sid);
 		if(cid && cid!=''){
 			frameBox.find('iframe[frameid="'+cid+'"]').remove();
 		}
@@ -259,7 +259,7 @@ yCloud.multipSearchOption = function(){
 	var reslist = container.find('.resultlist');
 	box.click(function(){
 		input.focus();
-	})
+	});
 	$('.floatinput').on('keydown keyup',function(e){
 		var val = $(this).val();
 		holder.text(val);
@@ -284,7 +284,7 @@ yCloud.multipSearchOption = function(){
 				if(val == $(this).find('span').text()){
 					hasSame = true;
 				}
-			})
+			});
 			if(!hasSame){
 				if(val.length > 0 && $.trim(val)!=''){
 					var sid;
@@ -310,7 +310,7 @@ yCloud.multipSearchOption = function(){
 			if(val == $(this).find('span').text()){
 				hasSame = true;
 			}
-		})
+		});
 		if(!hasSame){
 			if(val.length > 0 && $.trim(val)!=''){
 				var sid;
@@ -394,7 +394,7 @@ yCloud.multipSearchOption = function(){
 			showBtn.removeClass('on');
 			e.stopPropagation();
 		}
-	})
+	});
 	function setKeyInfo(str,sid){
 		var html,sidattr='';
 		if(sid != undefined && sid != ""){
@@ -422,7 +422,7 @@ $(function(){
 	yCloud.sideBar();
 	yCloud.runroll();
 	yCloud.tableClickHolder();	
-})
+});
 
 function launchFullscreen(element) {
 	if(element.requestFullscreen) {

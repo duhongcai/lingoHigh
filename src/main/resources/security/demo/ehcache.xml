@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ehche name="es">
+    <diskStore path="java.io.tmpdir" />
+    <cache
+        name="passwordRetryCache"
+        maxEntriesLocalHeap="2000"
+        eternal="false"
+        timeToIdleSecondes="3600"
+        timeToLiveSecondes="0"
+        overflowToDisk="false"
+        statistics="true">
+    </cache>
+
+</ehche>

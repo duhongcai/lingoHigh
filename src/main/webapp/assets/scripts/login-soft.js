@@ -66,7 +66,7 @@ var Login = function() {
                 return false;
             }
         });
-    }
+    };
 
     var handleForgetPassword = function() {
         $('.forget-form').validate({
@@ -136,7 +136,7 @@ var Login = function() {
             jQuery('.forget-form').hide();
         });
 
-    }
+    };
 
     var handleRegister = function() {
 
@@ -272,7 +272,7 @@ var Login = function() {
             jQuery('.login-form').show();
             jQuery('.register-form').hide();
         });
-    }
+    };
 
     return {
         // main function to initiate the module

@@ -28,7 +28,7 @@
 }(this, function($, Sifter, MicroPlugin) {
 	'use strict';
 
-	@@js
+	@@js;
 
 	return Selectize;
 }));

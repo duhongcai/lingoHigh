@@ -70,7 +70,7 @@ var TableAdvanced = function () {
                 oTable.fnOpen( nTr, fnFormatDetails(oTable, nTr), 'details' );
             }
         });
-    }
+    };
 
     var initTable2 = function() {
         var oTable = $('#sample_2').dataTable( {           
@@ -96,7 +96,7 @@ var TableAdvanced = function () {
             var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
             oTable.fnSetColumnVis(iCol, (bVis ? false : true));
         });
-    }
+    };
 
     return {
 

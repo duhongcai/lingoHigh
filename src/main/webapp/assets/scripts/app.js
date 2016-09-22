@@ -36,7 +36,7 @@ var App = function() {
             width : e[a + 'Width'],
             height : e[a + 'Height']
         }
-    }
+    };
     // initializes main settings
     var handleInit = function() {
 
@@ -74,14 +74,14 @@ var App = function() {
                 $('.footer').show();
             });
         }
-    }
+    };
     var handleSidebarState = function() {
         // remove sidebar toggler if window width smaller than 992(for tablet and phone mode)
         var viewport = _getViewPort();
         if (viewport.width < 992) {
             $('body').removeClass("page-sidebar-closed");
         }
-    }
+    };
     // runs callback functions set by App.addResponsiveHandler().
     var runResponsiveHandlers = function() {
         // reinitialize other subscribed elements
@@ -89,19 +89,19 @@ var App = function() {
             var each = responsiveHandlers[i];
             each.call();
         }
-    }
+    };
     // reinitialize the laypot on window resize
     var handleResponsive = function() {
         handleSidebarState();
         handleSidebarAndContentHeight();
         handleFixedSidebar();
         runResponsiveHandlers();
-    }
+    };
     // initialize the layout on page load
     var handleResponsiveOnInit = function() {
         handleSidebarState();
         handleSidebarAndContentHeight();
-    }
+    };
     // handle the layout reinitialization on window resize
     var handleResponsiveOnResize = function() {
         var resize;
@@ -133,7 +133,7 @@ var App = function() {
                 // wait 50ms until window resize finishes.
             });
         }
-    }
+    };
     //* BEGIN:CORE HANDLERS *//
     // this function handles responsive layout on screen size resize or mobile device rotate.
 
@@ -159,7 +159,7 @@ var App = function() {
                 content.attr('style', 'min-height:' + height + 'px !important');
             }
         }
-    }
+    };
     // Handle sidebar menu
     var handleSidebarMenu = function() {
         jQuery('.page-sidebar').on('click', 'li > a', function(e) {
@@ -249,7 +249,7 @@ var App = function() {
                 async : false
             });
         });
-    }
+    };
     // Helper function to calculate sidebar height for fixed sidebar layout.
     var _calculateFixedSidebarViewportHeight = function() {
         var sidebarHeight = $(window).height() - $('.header').height() + 1;
@@ -258,7 +258,7 @@ var App = function() {
         }
 
         return sidebarHeight;
-    }
+    };
     // Handles fixed sidebar
     var handleFixedSidebar = function() {
         var menu = $('.page-sidebar-menu');
@@ -291,7 +291,7 @@ var App = function() {
             });
             handleSidebarAndContentHeight();
         }
-    }
+    };
     // Handles the sidebar menu hover effect for fixed sidebar.
     var handleFixedSidebarHoverable = function() {
         if ($('body').hasClass('page-sidebar-fixed') === false) {
@@ -339,7 +339,7 @@ var App = function() {
                 });
             }
         });
-    }
+    };
     // Handles sidebar toggler to close/hide the sidebar.
     var handleSidebarToggler = function() {
         var viewport = _getViewPort();
@@ -429,7 +429,7 @@ var App = function() {
             e.preventDefault();
             $('.header .search-form').submit();
         });
-    }
+    };
     // Handles the horizontal menu
     var handleHorizontalMenu = function() {
         //handle hor menu search form toggler click
@@ -469,7 +469,7 @@ var App = function() {
                 return false;
             }
         });
-    }
+    };
     // Handles the go to top button at the footer
     var handleGoTop = function() {
         var offset = 300;
@@ -497,7 +497,7 @@ var App = function() {
             App.scrollTo();
             e.preventDefault();
         });
-    }
+    };
     // Handles portlet tools & actions
     var handlePortletTools = function() {
         jQuery('body').on('click', '.portlet > .portlet-title > .tools > a.remove', function(e) {
@@ -525,7 +525,7 @@ var App = function() {
                 el.slideDown(200);
             }
         });
-    }
+    };
     // Handles custom checkboxes & radios using jQuery Uniform plugin
     var handleUniform = function() {
         if (!jQuery().uniform) {
@@ -540,7 +540,7 @@ var App = function() {
                 }
             });
         }
-    }
+    };
     // Handles Bootstrap Accordions.
     var handleAccordions = function() {
         var lastClicked;
@@ -555,7 +555,7 @@ var App = function() {
                 scrollTop : lastClicked.offset().top - 150
             }, 'slow');
         });
-    }
+    };
     // Handles Bootstrap Tabs.
     var handleTabs = function() {
         // fix content height on tab click
@@ -572,7 +572,7 @@ var App = function() {
             });
             $('a[href="#' + tabid + '"]').click();
         }
-    }
+    };
     // Handles Bootstrap Modals.
     var handleModals = function() {
         // fix stackable modal issue: when 2 or more modals opened, closing one of modal will remove .modal-open class.
@@ -593,11 +593,11 @@ var App = function() {
         $('body').on('hide.bs.modal', '.modal', function() {
             $('body').removeClass("modal-open-noscroll");
         });
-    }
+    };
     // Handles Bootstrap Tooltips.
     var handleTooltips = function() {
         jQuery('.tooltips').tooltip();
-    }
+    };
     // Handles Bootstrap Dropdowns
     var handleDropdowns = function() {
         /*
@@ -616,17 +616,17 @@ var App = function() {
         $('body').on('click', '.dropdown-menu.hold-on-click', function(e) {
             e.stopPropagation();
         });
-    }
+    };
     // Handle Hower Dropdowns
     var handleDropdownHover = function() {
         $('[data-hover="dropdown"]').dropdownHover();
-    }
+    };
     var handleAlerts = function() {
         $('body').on('click', '[data-close="alert"]', function(e) {
             $(this).parent('.alert').hide();
             e.preventDefault();
         });
-    }
+    };
     // Handles Bootstrap Popovers
 
     // last popep popover
@@ -642,7 +642,7 @@ var App = function() {
                 lastPopedPopover.popover('hide');
             }
         });
-    }
+    };
     // Handles scrollable contents using jQuery SlimScroll plugin.
     var handleScrollers = function() {
         $('.scroller').each(function() {
@@ -663,7 +663,7 @@ var App = function() {
                 disableFadeOut : true
             });
         });
-    }
+    };
     // Handles Image Preview using jQuery Fancybox plugin
     var handleFancybox = function() {
         if (!jQuery.fancybox) {
@@ -683,7 +683,7 @@ var App = function() {
                 }
             });
         }
-    }
+    };
     // Fix input placeholder issue for IE8 and IE9
     var handleFixInputPlaceholderForIE = function() {
         //fix html5 placeholder attribute for ie7 & ie8
@@ -710,7 +710,7 @@ var App = function() {
                 });
             });
         }
-    }
+    };
     // Handle full screen mode toggle
     var handleFullScreenMode = function() {
         // mozfullscreenerror event handler
@@ -741,7 +741,7 @@ var App = function() {
         $('#trigger_fullscreen').click(function() {
             toggleFullScreen();
         });
-    }
+    };
     // Handle Select2 Dropdowns
     var handleSelect2 = function() {
         if (jQuery().select2) {
@@ -750,7 +750,7 @@ var App = function() {
                 allowClear : true
             });
         }
-    }
+    };
     // Handle Theme Settings
     var handleTheme = function() {
 
@@ -784,7 +784,7 @@ var App = function() {
             }
 
             $('body > .container').remove();
-        }
+        };
         var lastSelectedLayout = '';
 
         var setLayout = function() {
@@ -886,13 +886,13 @@ var App = function() {
             // reinitialize fixed sidebar
             handleFixedSidebarHoverable();
             // reinitialize fixed sidebar hover effect
-        }
+        };
         // handle theme colors
         var setColor = function(color) {
             var color_ = (App.isRTL() ? color + '-rtl' : color);
             $('#style_color').attr("href", "assets/css/themes/" + color_ + ".css");
             $.cookie('style_color', color);
-        }
+        };
 
         $('.toggler', panel).click(function() {
             $('.toggler').hide();
@@ -920,7 +920,7 @@ var App = function() {
         if ($.cookie('style_color')) {
             setColor($.cookie('style_color'));
         }
-    }
+    };
     //* END:CORE HANDLERS *//
 
     return {
@@ -998,7 +998,7 @@ var App = function() {
             //handles accordions
             handleUniform();
             // hanfle custom radio & checkboxes
-            handleDropdownHover() // handles dropdown hover
+            handleDropdownHover(); // handles dropdown hover
         },
 
         //public function to fix the sidebar and content height accordingly
@@ -1155,6 +1155,6 @@ var App = function() {
                 return '';
             }
         }
-    };
+    };;
 
 }();

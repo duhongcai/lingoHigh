@@ -86,7 +86,7 @@
                 index++;
             });
         }
-    }
+    };
 
     BootstrapTable.prototype.initBody = function () {
         initBodyCaller = true;

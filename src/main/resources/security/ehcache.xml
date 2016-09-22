@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <ehcach name="es">
+        <disStore path="java.io.tmpdir">
+            <cache name="passwordRetryCache"
+                   maxEntriesLoaclHeap="2000"
+                   eternal = "false"
+                   timeToLiveSeconds="0"
+                   overflowToDisk="false"
+                   statistics="true">
+            </cache>
+        </disStore>
+    </ehcach>
